@@ -1,0 +1,45 @@
+body{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+header, footer{
+    background-color: black;
+    color : white;
+}
+main{
+    background-color: aliceblue;
+
+}
+aside{
+    background-color: gray;
+}
+main,aside{
+    flex:1;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-inline: 10px;
+}
+header,main,aside,footer{
+    padding: 10px 15px;
+}
+@media (min-width: 600px) and (max-width: 900px){
+    section{
+        flex-direction: row;
+    }
+    
+}
+@media (min-width: 900px){
+    section{
+        flex-direction: row;
+    }
+    main{
+        flex : 2;
+    }
+    aside{
+        flex:1;
+    }
+}

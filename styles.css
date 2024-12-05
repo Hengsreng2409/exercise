@@ -1,0 +1,58 @@
+/* Base Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .grid-container {
+    display: grid;
+    gap: 20px; /* Adjust spacing between items */
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  /* Default: 3 columns for larger screens */
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* Grid Items */
+  .grid-item {
+    background-color: #add8e6; /* Light blue */
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  /* Responsive Breakpoints */
+  @media (max-width: 1000px) {
+    .grid-container {
+      grid-template-columns: repeat(3, 1fr); /* Still 3 columns */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .grid-container {
+      grid-template-columns: 1fr; /* 1 column */
+    }
+  }
+  
